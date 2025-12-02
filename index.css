@@ -16,7 +16,7 @@ html {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #ffffff; /* change to your theme */
+  background:   background: #1BCBEA; /* change to your theme */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,3 +407,4 @@ nav {
     }
 
 }
+
