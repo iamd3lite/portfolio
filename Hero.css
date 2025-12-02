@@ -313,3 +313,32 @@
         height: 180px;
     }
 }
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #a0aec0;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    min-height: 80px; /* Fixed height - prevents movement */
+    display: flex;
+    align-items: flex-start; /* Align text to top */
+}
+
+@media (max-width: 968px) {
+    .hero-subtitle {
+        min-height: 70px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-subtitle {
+        min-height: 90px; /* More space for wrapping text */
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-subtitle {
+        min-height: 100px;
+    }
+}
