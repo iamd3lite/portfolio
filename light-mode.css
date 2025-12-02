@@ -1,0 +1,101 @@
+/* Root variables for easy theme switching */
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #273548;
+    --text-primary: #e2e8f0;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --accent-color: #22d3ee;
+}
+
+/* Light mode variables */
+body.light-mode {
+    --bg-primary: #f1f5f9;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --accent-color: #0ea5e9;
+}
+
+/* Apply variables to body */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Update all your sections to use variables */
+.navigations {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero {
+    background-color: var(--bg-primary);
+}
+
+
+.hero-greeting {
+    color: #636569;
+}
+
+.about-section {
+    background-color: var(--bg-tertiary);
+}
+
+.skills-section {
+    background-color: var(--bg-primary);
+}
+
+.projects-section {
+    background-color: var(--bg-tertiary);
+}
+
+.contact-section {
+    background-color: var(--bg-primary);
+}
+
+.footer {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Cards */
+.skill-card,
+.project-card,
+.contact-form {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+/* Text colors */
+.nav-links a,
+.contact-link {
+    color: var(--text-secondary);
+}
+
+.about-paragraph,
+.project-description,
+.contact-description {
+    color: var(--text-muted);
+}
+
+/* Form inputs */
+.form-group input,
+.form-group textarea {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Tech badges */
+.tech-badge {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}

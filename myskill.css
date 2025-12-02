@@ -1,0 +1,101 @@
+        .skills-section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+
+        .skills-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .skills-title .highlight {
+            color: #22d3ee;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .skill-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2.5rem;
+            min-height: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            border-color: #22d3ee;
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+            transform: translateY(-7px);
+        }
+
+
+        .skill-card h3 {
+            font-size: 1.75rem;
+            color: #22d3ee;
+            margin-bottom: 2rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .skill-card li {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .skill-card li:hover {
+            cursor: pointer;
+            color: #22d3ee;
+        }
+
+        .skill-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #22d3ee;
+        }
+        .fade-in-section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-title {
+                font-size: 2rem;
+            }
+
+            .skills-section {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
