@@ -48,37 +48,52 @@
 
         type();
 
-        // Premium Hamburger Menu
-        var hamburger = document.getElementById('hamburger');
-        var mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-        var closeMenu = document.getElementById('closeMenu');
-        var mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-        var body = document.body;
+        // Premium Hamburger Menu with Animation - FIXED
+var hamburger = document.getElementById('hamburger');
+var mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+var closeMenu = document.getElementById('closeMenu');
+var mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+var body = document.body;
 
-        hamburger.addEventListener('click', function() {
-            mobileMenuOverlay.classList.add('active');
-            body.style.overflow = 'hidden';
-        });
+// Function to open menu
+function openMenu() {
+    mobileMenuOverlay.classList.add('active');
+    hamburger.classList.add('active');
+    body.style.overflow = 'hidden';
+}
 
-        closeMenu.addEventListener('click', function() {
-            mobileMenuOverlay.classList.remove('active');
-            body.style.overflow = '';
-        });
+// Function to close menu
+function closeMenuFunc() {
+    mobileMenuOverlay.classList.remove('active');
+    hamburger.classList.remove('active');
+    body.style.overflow = '';
+}
 
-        mobileNavLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
-                mobileMenuOverlay.classList.remove('active');
-                body.style.overflow = '';
-            });
-        });
+// Toggle menu when clicking hamburger
+hamburger.addEventListener('click', function() {
+    if (hamburger.classList.contains('active')) {
+        closeMenuFunc();
+    } else {
+        openMenu();
+    }
+});
 
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                mobileMenuOverlay.classList.remove('active');
-                body.style.overflow = '';
-            }
-        });
+// Close menu when clicking close button (if visible)
+if (closeMenu) {
+    closeMenu.addEventListener('click', closeMenuFunc);
+}
 
+// Close menu when clicking nav links
+mobileNavLinks.forEach(function(link) {
+    link.addEventListener('click', closeMenuFunc);
+});
+
+// Close menu when clicking overlay
+mobileMenuOverlay.addEventListener('click', function(e) {
+    if (e.target === mobileMenuOverlay) {
+        closeMenuFunc();
+    }
+});
         // Scroll Animations
         var fadeInSections = document.querySelectorAll('.fade-in-section');
         
