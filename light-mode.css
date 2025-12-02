@@ -40,10 +40,6 @@ body {
 }
 
 
-.hero-greeting {
-    color: #636569;
-}
-
 .about-section {
     background-color: var(--bg-tertiary);
 }
@@ -98,4 +94,5 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-secondary);
     border: 1px solid var(--border-color);
+
 }
